@@ -16,8 +16,18 @@ Once you have MATLAB downloaded and you are familiar with MATLAb syntax, downloa
 Then, access this folder in your directory under `../Thesis_KalmanFilters/Unscented_KFs/Albers/`
 
 ## Contents
+`AlbersMeasFcn.m` - defines which state variable we will create simulated measurement values for
+`AlbersNoiseFcn_Add.m` - defines the measurement function used in the UKF algorithm where noise is additive
+`AlbersNoiseFcn_NonAdd.m` - defines the measurement function used in the UKF algorithm where noise is not additive
+`AlbersODE.m` - defines the system in state space form
+`AlbersParamVals.m` - defines all the parameter values in the system
+`AlbersStateFcn.m` - solves the system using MATLAB's ODE solver `ode45`
+`AlbersStateFcnEuler.m` - solves the system in state space form using Euler's method
+`Albers_UKF.m` - main file that implements UKF on the system and graphs the results
+`Icon` - file used to sync with Google Drive File Stream
 
 ## Getting Started
+Run the file `Albers_UKF.m`, which is the UKF implementation for the type 2 diabetes model. This file should produce two graphs, one of which displays the results of the UKF estimation while the other displays the residuals of the UKF estimations.
 
 ## About the Model
 For more information on the model, please read the section called **Mechanistic models** or look at the **S2 Appendix** in the following paper:
