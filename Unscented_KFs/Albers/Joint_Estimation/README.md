@@ -20,10 +20,10 @@ Then, access this folder in your directory under `../Thesis_KalmanFilters/Unscen
 `AlbersNoiseFcn_Add.m` - defines the measurement function used in the UKF algorithm where noise is additive  
 `AlbersODE.m` - defines the system in state space form  
 `AlbersParamVals.m` - defines all the parameter values in the system  
-`AlbersTransFcn.m` - defines the state transition function used in the UKF algorithm by solving the system using MATLAB's ODE solver `ode45`
-`Albers_jointUKF.m` - main file that implements joint UKF on the system and graphs the results
-`Albers_xTrue` - csv file that contains the simulated true values produced by running the ODE solver `ode45` on the system with a set time interval
-`Albers_yMeas` - csv file that contains the simulated measurement values produced by adding noise to each true value in `Albers_xTrue`
+`AlbersTransFcn.m` - defines the state transition function used in the UKF algorithm by solving the system using MATLAB's ODE solver `ode45`  
+`Albers_jointUKF.m` - main file that implements joint UKF on the system and graphs the results  
+`Albers_xTrue` - csv file that contains the simulated true values produced by running the ODE solver `ode45` on the system with a set time interval  
+`Albers_yMeas` - csv file that contains the simulated measurement values produced by adding noise to each true value in `Albers_xTrue`  
 `Alebrs_yTrue` - csv file that contains the simulated true values for the one state that the UKF algorithm is estimating (glucose) as well as the three parameters that the algorithm is estimating ($E$, $V_i$, $t_i$)  
 `Icon` - file used to sync with Google Drive File Stream
 
