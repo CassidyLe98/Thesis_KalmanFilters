@@ -30,14 +30,7 @@ To start exploring the files in this folder, it may be best to start with the [k
 
 After the linear example, one can move on to the nonlinear example, which is the [Van der Pol Oscillator](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/MatLab_vdp_Example). A thorough explanation of this example can be found in **Chapter 7.1** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
 
-For a more challenging biological example, see the [type 2 diabetes model](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/Albers). A thorough explanation of this implementation is detailed in **Chapter 7.3** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis). For more information on the model, please read the section called **Mechanistic models** or look at the **S2 Appendix** in the following paper:
-```
-Albers, D. J., Levine, M. E., Stuart, A., Mamykina, L., Gluckman, B., & Hripcsak, G. (2018). Mechanistic machine learning: How data assimilation leverages physiologic knowledge using Bayesian inference to forecast the future, infer the present, and phenotype. Journal of the American Medical Informatics Association, 25(10), 1392-1401. https://doi.org/10.1093/jamia/ocy106
-```
-The model is further detailed in the Appendix of the following paper:
-```
-J. Sturis, K.E.A. (1991). Computer model for mechanisms underlying ultradian oscillations of insulin and glucose. AJP - Endocrinology and Metabolism, 260, E801
-```
+For a more challenging biological example, see the [type 2 diabetes model](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/Albers). A thorough explanation of this implementation is detailed in **Chapter 7.3** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
 
 After understanding how to use UKF to estiamte state variables, one can move on to estimating states and parameters for the [type 2 diabetes model](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/Albers/Joint_Estimation). In this implementation, we use joint UKF. An explanation of joint estimation can be found in **Chapter 8.1** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
 
