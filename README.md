@@ -20,7 +20,7 @@ The repository contains code with documentation and can be downloaded from <http
 
 ## Getting Started
 1. Download the most recently updated source code from the [GitHub repository](https://github.com/CassidyLe98/Thesis_KalmanFilters).
-2. Find the implementations of each algorithm in the designated folders. EKF implementations are located in [`/Extended_KFs`](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs). UKF implementations are located in [`/Unscented_KFs`](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs).
+2. Find the implementations of each algorithm in the designated folders. EKF implementations are located in [`/Extended_KFs/`](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs). UKF implementations are located in [`/Unscented_KFs/`](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs).
 3. Please read each `README.md` in each folder in order to better understand how to navigate the various implementations.
 
 ## Implementations
