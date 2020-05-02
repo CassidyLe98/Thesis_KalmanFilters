@@ -24,11 +24,11 @@ Then, access this folder in your directory under `../Thesis_KalmanFilters/Unscen
 `Albers_jointUKF.m` - main file that implements joint UKF on the system and graphs the results  
 `Albers_xTrue` - csv file that contains the simulated true values produced by running the ODE solver `ode45` on the system with a set time interval  
 `Albers_yMeas` - csv file that contains the simulated measurement values produced by adding noise to each true value in `Albers_xTrue`  
-`Alebrs_yTrue` - csv file that contains the simulated true values for the one state that the UKF algorithm is estimating (glucose) as well as the three parameters that the algorithm is estimating ($E$, $V_i$, $t_i$)  
+`Alebrs_yTrue` - csv file that contains the simulated true values for the one state that the UKF algorithm is estimating (glucose) as well as the three parameters that the algorithm is estimating (E, V_i, t_i)  
 `Icon` - file used to sync with Google Drive File Stream
 
 ## Getting Started
-Run the file `Albers_jointUKF.m`, which is the joint UKF implementation for the type 2 diabetes model to estimate both states and parameters. This file should produce four graphs: one that displays the results for the state for which the algorithm is estimating (glucose) and three others that display the results for the parameters for which the algorithm is estimating ($E$, $V_i$, $t_i$). Each of these four graphs should have two sub-plots: one indicating the UKF estimates and another showing the residuals of those UKF estimates.
+Run the file `Albers_jointUKF.m`, which is the joint UKF implementation for the type 2 diabetes model to estimate both states and parameters. This file should produce four graphs: one that displays the results for the state for which the algorithm is estimating (glucose) and three others that display the results for the parameters for which the algorithm is estimating (E, V_i, t_i). Each of these four graphs should have two sub-plots: one indicating the UKF estimates and another showing the residuals of those UKF estimates.
 
 ## About the Model
 For more information on the model, please read the section called **Mechanistic models** or look at the **S2 Appendix** in the following paper:
