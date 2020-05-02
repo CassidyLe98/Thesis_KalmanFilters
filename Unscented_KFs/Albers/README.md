@@ -30,6 +30,8 @@ Then, access this folder in your directory under `../Thesis_KalmanFilters/Unscen
 ## Getting Started
 Run the file `Albers_UKF.m`, which is the UKF implementation for the type 2 diabetes model. This file should produce two graphs, one of which displays the results of the UKF estimation while the other displays the residuals of the UKF estimations.
 
+To see how joint UKF is used to estimate states and parameters, see the `/Joint_Estimation/` folder within this directory.
+
 ## About the Model
 For more information on the model, please read the section called **Mechanistic models** or look at the **S2 Appendix** in the following paper:
 ```
