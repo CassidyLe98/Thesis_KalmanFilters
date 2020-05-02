@@ -1,7 +1,9 @@
 # Thesis_KalmanFilters
 
 ## About
-Kalman filtering is a type of Data Assimilation algorithm that can be used to estimate states and parameters of different models. Recently, researchers have been exploring the use of Kalman filters in bioinformatics. Here, we explore how Kalman filtering, particularly extended Kalman filter (EKF) and unscented Kalman filter (UKF), can be applied to bioinformatics in order to accurately estimate states and parameters of a model given a dataset. This work is associated with a senior capstone project (thesis research), of whcih the paper can be found through this [Google site page ](https://sites.google.com/g.hmc.edu/cle/thesis).
+Kalman filtering is a type of Data Assimilation algorithm that can be used to estimate states and parameters of different models. Recently, researchers have been exploring the use of Kalman filters in bioinformatics. Here, we explore how Kalman filtering, particularly extended Kalman filter (EKF) and unscented Kalman filter (UKF), can be applied to bioinformatics in order to accurately estimate states and parameters of a model given a dataset.
+
+This work is associated with a senior capstone project (thesis research), of whcih the paper can be found through this [Google site page ](https://sites.google.com/g.hmc.edu/cle/thesis).
 
 The repository includes MATLAB implementation of both EKF and UKF on various models. If you use this project for your research, please cite:
 ```
@@ -25,7 +27,7 @@ The repository contains code with documentation and can be downloaded from <http
 In this repository, there are two different algorithms that are implemented: extended Kalman filter (EKF) and unscented Kalman filter (UKF). Each of these algorithms were applied to both linear and nonlinear models to estimate states as well as parameters. In order to estimate states, we use the standard EKF and UKF. To estimate both states and parameters, we use joint estimation in conjunction with EKF and UKF.
 
 More details can be found in the README.md files in each folder. Below, I outline the different implementations that were used.
-1. [extended Kalman filter](https://github.com/CassidyLe98/Thesis_KalmanFilters/Extended_KFs) 
+1. [extended Kalman filter](https://github.com/CassidyLe98/Thesis_KalmanFilters/Extended_KFs)
 2. [unscented Kalman filter](https://github.com/CassidyLe98/Thesis_KalmanFilters/Unscented_KFs)
 
 ## Acknowledgments
