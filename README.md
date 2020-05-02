@@ -28,6 +28,10 @@ In this repository, there are two different algorithms that are implemented: ext
 
 More details can be found in the README.md files in each folder. Below, I outline the different implementations that were used.
 1. [extended Kalman filter implementations](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs)
+    1. State estimation for a simple linear model ([Bolviken paper example 7](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Bolviken_Ex7))
+    2. State estimation for a nonlinear model ([Bolviken paper example 5](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Bolviken_Ex5))
+    3. State and parameter estimation for a linear model ([Bolviken paper example 7](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Joint_Estimation/Bolviken_Ex7))
+    4. State and parameter estimation for a nonlinear model ([type 2 diabetes system](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Joint_Estimation/Albers))
 2. [unscented Kalman filter implementations](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs)
     1. State estimation for a simple linear model ([kinematic equation](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/Kinematic))
     2. State estimation for a nonlinear model ([Van der Pol Oscillator](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/MatLab_vdp_Example))
