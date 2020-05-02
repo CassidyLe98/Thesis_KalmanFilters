@@ -1,5 +1,5 @@
 # Albers
-We provide the MATLAB code for implementing the unscented Kalman filter (UKF) on a biological model, specifically a type 2 diabetes model used by [Albers et al](https://www.researchgate.net/publication/328266432_Mechanistic_machine_learning_How_data_assimilation_leverages_physiologic_knowledge_using_Bayesian_inference_to_forecast_the_future_infer_the_present_and_phenotype) and originally proposed by [Sturis et al](https://www.deepdyve.com/lp/the-american-physiological-society/computer-model-for-mechanisms-underlying-ultradian-oscillations-of-mtFTaWd2v1). The code files rely on MATLAB's built-in `unscentedKalmanFilter` function. For details on this function, please see [MATLAB's documentation](https://www.mathworks.com/help/control/ref/unscentedkalmanfilter.html) for it.
+We provide the MATLAB code for implementing the unscented Kalman filter (UKF) on a biological model, specifically a type 2 diabetes model used by [Albers et al](https://www.researchgate.net/publication/328266432_Mechanistic_machine_learning_How_data_assimilation_leverages_physiologic_knowledge_using_Bayesian_inference_to_forecast_the_future_infer_the_present_and_phenotype) and originally proposed by [Sturis et al](https://www.deepdyve.com/lp/the-american-physiological-society/computer-model-for-mechanisms-underlying-ultradian-oscillations-of-mtFTaWd2v1). The code files rely on MATLAB's built-in `unscentedKalmanFilter` function. For details on this function, please see [MATLAB's documentation](https://www.mathworks.com/help/control/ref/unscentedkalmanfilter.html) for it. A thorough explanation of this implementation is detailed in **Chapter 7.3** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
 
 For these files, the MATLAB version used was R2016b, though any version after R2016b should also work.
 
@@ -18,7 +18,6 @@ Then, access this folder in your directory under `../Thesis_KalmanFilters/Unscen
 ## Contents
 
 ## Getting Started
-A thorough explanation of this implementation is detailed in **Chapter 7.3** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
 
 ## About the Model
 For more information on the model, please read the section called **Mechanistic models** or look at the **S2 Appendix** in the following paper:
