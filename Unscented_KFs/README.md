@@ -17,11 +17,11 @@ Then, access this folder in your directory under `../Thesis_KalmanFilters/Unscen
 
 ## Contents
 The `Unscented_KFs/` folder consists of different implementations of UKF. This folder is separated by the implementations that are used to estimate just the state variables and the implementations that are used to estimate both state variables and parameters. In either case, the code uses MATLAB's built-in `unscentedKalmanFilter` function to implement UKF.
-1. State estimation
-  1. Simple linear model ([kinematic equation](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/Kinematic))
-  2. Nonlinear model ([Van der Pol Oscillator](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/MatLab_vdp_Example))
+1. State estimation  
+  1. Simple linear model ([kinematic equation](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/Kinematic))  
+  2. Nonlinear model ([Van der Pol Oscillator](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/MatLab_vdp_Example))  
   3. Biological model ([type 2 diabetes system](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/Albers))
-2. State and parameter estimation
+2. State and parameter estimation  
   1. Biological model ([type 2 diabetes system](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/Albers/Joint_Estimation))
 
 
