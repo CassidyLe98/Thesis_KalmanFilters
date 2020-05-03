@@ -1,42 +1,77 @@
 % Author: Cassidy Le
-% Date: April 7, 2019
-% Summary: EKF implementation of Albers study 2018
-%          Estimating all states and 3 parameters (E, V_i, t_i)
+% Date: April 7, 2020
+% Summary:  joint EKF implementation of Albers' et al 2018 T2D model
+%           Estimating all states and 3 parameters (E, V_i, t_i)
+%           CITATION: Albers, D. J., Levine, M. E., Stuart, A., Mamykina,
+%           L., Gluckman, B., & Hripcsak, G. (2018). Mechanistic machine
+%           learning: How data assimilation leverages physiologic knowledge
+%           using Bayesian inference to forecast the future, infer the
+%           present, and phenotype. Journal of the American Medical
+%           Informatics Association, 25(10), 1392-1401.
+%           https://doi.org/10.1093/jamia/ocy106
+% Dependencies: AlbersODE.m
+%               AlbersParamFcn.m
+%               AlbersNoiseFcn_Add.m
+%               AlbersMeasFcn.m
+%               AlbersParamVals.m
+% (if simulating new data dependencies also include the following
+%               Albers_xTrue
+%               Albers_yTrue
+%               Albers_yMeas
+%                           )
 
-% Initial conditions taken from Albers code
-% I_p = 200
-% I_i = 200
-% G = 12000... units = mg dL^(-1)
-% h_1 = 0.1
-% h_2 = 0.2
-% h_3 = 0.1
+% Note: Code implementation is based on MATLAB unscentedKalmanFilter
+%       example. Altered to use EKF rather than UKF.
+%       https://www.mathworks.com/help/control/ref/unscentedkalmanfilter.html
+
+% TO DO: if simulating new data, please comment/uncomment out lines of code
+%        as instructed.
+
+% Initial conditions taken from Albers code in following GitHub repo:
+% https://github.com/djalbers/glucose_dynamics_modeling/blob/master/standard_multi_nutrition/integrate_plot_glucose.m
+% I_p = 200 mU
+% I_i = 200 mU
+% G = 12000 mg dL^(-1)
+% h_1 = 0.1 (feeding time delay)
+% h_2 = 0.2 (feeding time delay)
+% h_3 = 0.1 (feeding time delay)
+% Parameter initial condiitons set as actual value b/c these initial
+% conditions are used to produce the true values not the measured values
+% E = 0.2 L min^(-1)
+% V_i = 11 L
+% t_i = 100 min
+initialStateGuess = [200; 200; 12000; 0.1; 0.2; 0.1; 0.2; 11; 100];
+
+% Defining time interval to filter sample time
+% Units of time = [minutes]
+timeFinal = 590; % 9 days worth of minutes = 12960 minutes
+T = 1; % Size of time step
+timeVector = 0:T:timeFinal;
+
+% Create simulated data values (xTrue) by solving system of ODE using ode45
+[timeSteps,xTrue]=ode45(@AlbersODE,timeVector,initialStateGuess);
+
+% Read in stored data from csv files for reproducible results
+% TO DO: COMMENT OUT NEXT 6 LINES IF YOU WANT TO PRODUCE NEW SIMULATED DATA
+xTrue = readtable('Albers_xTrue'); % True state data (with scaled glucose)
+xTrue = xTrue{:,:}; % Formats data to matrix
+yTrue = readtable('Albers_yTrue'); % True state data (glucose and parameters)
+yTrue = yTrue{:,:}; % Formats data to matrix
+yMeas = readtable('Albers_yMeas'); % Measurement state data (glucose and parameters)
+yMeas = yMeas{:,:}; % Formats data to matrix
+
+% System has 10L of glucose = 100dL
+% System computes glucose in units mg dL^(-1) but want units to be mg
+% So we have to divide glucose by 100 before running EKF on system
+% TO DO: UNCOMMENT THE NEXT LINE IF YOU WANT TO PRODUCE NEW SIMULATED DATA
+%xTrue(:,3) = xTrue(:,3)./100; % glucose G
+
+% Moved construction of filter to input different initial state guesses
+% This allows EKF and glucTrue to start at same initial values
 % Parameter initial condiitons (offset from correct value)
 % E = 0.13... actual value = 0.2 L min^(-1)
 % V_i = 15... actual value = 11 L
 % t_i = 90... actual value = 100 min
-initialStateGuess = [200; 200; 12000; 0.1; 0.2; 0.1; 0.2; 11; 100];
-timeFinal = 590; % Units of time = minutes
-T = 1; % [min] Filter sample time
-timeVector = 0:T:timeFinal;
-
-% Solving system of ODE to produce true values (no noise)
-[timeSteps,xTrue]=ode45(@AlbersODE,timeVector,initialStateGuess);
-
-% Reads in simulated dataset
-xTrue = readtable('Albers_xTrue');
-xTrue = xTrue{:,:};
-yTrue = readtable('Albers_yTrue');
-yTrue = yTrue{:,:};
-yMeas = readtable('Albers_yMeas');
-yMeas = yMeas{:,:};
-
-% System has 10L of glucose = 100dL
-% AlbersODE computes mg/L of glucose but AlbersState computes mg/dL
-% Convert L back to dL by dividing by 100
-%xTrue(:,3) = xTrue(:,3)./100; % glucose G
-
-% Construction of filter has different initial state guesses
-% This allows UKF and yMeas to start at same initial values
 initialStateGuess = [200; 200; 120; 0.1; 0.2; 0.1; 0.13; 15; 90];
 
 % Construct the filter
@@ -52,16 +87,24 @@ sqrtR = sqrt(R); % Standard deviation of measurement noise
 ekf.MeasurementNoise = R; % Variance of measurement noise
 
 % Setting process noise values
+% Note: These values are REALLY sensitive. It is important to choose small
+%       values. Values that are too large won't allow sufficient smoothing.
+%       The algorithm will think the "noisy" measurements are correct.
 ekf.ProcessNoise = diag([0.02 0.1 0.04 0.2 0.5 0.01 0.0001 0.0001 .0001]);
 
+
+% TO DO: UNCOMMENT THE NEXT LINE IF YOU WANT TO PRODUCE NEW SIMULATED DATA
 %rng(1); % Fix random number generator for reproducible results
 
-% Glucose G is the only state we currently measure
+% Glucose is the only state we currently measure
 % We pretend we measure E, Vi, ti 
+% UNCOMMENT THE NEXT LINE IF YOU WANT TO PRODUCE NEW SIMULATED DATA
 %yTrue = [xTrue(:,3) xTrue(:,7) xTrue(:,8) xTrue(:,9)];
 
-% glucMeas = glucTrue + some noise -> distribution N(mean,sqrtR)
+% Produce simulated noisy measurement data for glucose state variable
+% yMeas = yTrue + some noise -> distribution N(mean,sqrtR)
 % sqrtR (above) is stadard deviation of measurement noise 
+% TO DO: UNCOMMENT THE NEXT LINE IF YOU WANT TO PRODUCE NEW SIMULATED DATA
 %yMeas = yTrue + (sqrtR^2*randn(size(yTrue)));
 
 for k=1:numel(timeSteps)
