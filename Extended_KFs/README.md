@@ -19,6 +19,8 @@ Then, access this folder in your directory under `../Thesis_KalmanFilters/Extend
 
 ## Contents
 The `/Extended_KFs/` folder consists of different implementations of EKF. This folder is separated by the implementations that are used to estimate just the state variables and the implementations that are used to estimate both state variables and parameters. For all but one of the implementations, the code is based on the source code from the Bolviken, Christophersen, and Storvik textbook. One implementation (state and parameter estimation for the type 2 diabetes model) uses MATLAB's built-in `extendedKalmanFilter` function to implement EKF.
+
+The different implementations of EKF are listed below:
 1. State estimation
     1. Simple linear model ([Bolviken, Christophersen, and Storvik textbook example 7](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Bolviken_Ex7))  
     2. Nonlinear model ([Bolviken, Christophersen, and Storvik textbook example 5](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Bolviken_Ex5))
