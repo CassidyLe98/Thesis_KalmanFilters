@@ -1,5 +1,5 @@
-# Simple Linear Model
-We provide the MATLAB code for implementing the extended Kalman filter (EKF) on a simple linear model, specifically an example (Example 5) proposed by Erik Bolviken, Nils Christophersen, and Geir Storvik in [their textbook](https://www.mn.uio.no/math/tjenester/kunnskap/kompendier/komp_kalman.pdf). This implementation produces estimates for two state (x and z). A thorough explanation of this implementation is detailed in **Chapter 5.2** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
+# Noninear Model
+We provide the MATLAB code for implementing the extended Kalman filter (EKF) on a nonlinear model, specifically an example (Example 5) proposed by Erik Bolviken, Nils Christophersen, and Geir Storvik in [their textbook](https://www.mn.uio.no/math/tjenester/kunnskap/kompendier/komp_kalman.pdf). This implementation produces estimates for two state (x and z). A thorough explanation of this implementation is detailed in **Chapter 5.2** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
 
 The code files are taken from source code in a [textbook](https://www.mn.uio.no/math/tjenester/kunnskap/kompendier/komp_kalman.pdf) written by Bolviken, Christophersen, and Storvik. The source code can be found in **Appendix A.5** (under "Extended Kalman filtering on Example 5").
 
