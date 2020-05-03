@@ -1,6 +1,6 @@
 % Author: Cassidy Le
 % Date: March 31, 2020
-% Summary:  Defines arameters in AlbersODE.m 
+% Summary:  Defines parameters in AlbersODE.m 
 %           From Table 1 in Albers2012 Population Physiology model paper
 %           CITATION: Albers DJ, Hripcsak G, Schmidt M (2012) Population
 %           Physiology: Leveraging Electronic Health Record Data to
