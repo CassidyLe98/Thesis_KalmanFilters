@@ -1,7 +1,7 @@
 # Extended_KFs
-We provide the MATLAB code for implementing the extended Kalman filter (EKF) on various linear and nonlinear models to estimate both states and parameters. The code files rely on source code from a [textbook written by Erik Bolviken, Nils Christophersen, and Geir Storvik](https://www.mn.uio.no/math/tjenester/kunnskap/kompendier/komp_kalman.pdf) as well as MATLAB's built-in `extendedKalmanFilter` function.
+We provide the MATLAB code for implementing the extended Kalman filter (EKF) on various linear and nonlinear models to estimate both states and parameters. The code files rely on source code from a textbook written by Erik Bolviken, Nils Christophersen, and Geir Storvik as well as MATLAB's built-in `extendedKalmanFilter` function.
 
-The source code from the Bolviken, Christophersen, and Storvik textbook can be found in **Appendix A.5** (under "Extended Kalman filtering on Example 5"). For details on the `extendedKalmanFilter` function, please see [MATLAB's documentation](https://www.mathworks.com/help/control/ref/extendedkalmanfilter.html) for it.
+The source code from the [Bolviken, Christophersen, and Storvik textbook](https://www.mn.uio.no/math/tjenester/kunnskap/kompendier/komp_kalman.pdf) can be found in **Appendix A.5** (under "Extended Kalman filtering on Example 5"). For details on the `extendedKalmanFilter` function, please see [MATLAB's documentation](https://www.mathworks.com/help/control/ref/extendedkalmanfilter.html) for it.
 
 For these files, the MATLAB version used was R2016b, though any version after R2016b should also work.
 
