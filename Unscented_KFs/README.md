@@ -16,7 +16,7 @@ Once you have MATLAB downloaded and you are familiar with MATLAb syntax, downloa
 Then, access this folder in your directory under `../Thesis_KalmanFilters/Unscented_KFs/`
 
 ## Contents
-The `Unscented_KFs/` folder consists of different implementations of UKF. This folder is separated by the implementations that are used to estimate just the state variables and the implementations that are used to estimate both state variables and parameters. In either case, the code uses MATLAB's built-in `unscentedKalmanFilter` function to implement UKF.
+The `/Unscented_KFs/` folder consists of different implementations of UKF. This folder is separated by the implementations that are used to estimate just the state variables and the implementations that are used to estimate both state variables and parameters. In either case, the code uses MATLAB's built-in `unscentedKalmanFilter` function to implement UKF.
 1. State estimation
     1. Simple linear model ([kinematic equation](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/Kinematic))  
     2. Nonlinear model ([Van der Pol Oscillator](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/MatLab_vdp_Example))
