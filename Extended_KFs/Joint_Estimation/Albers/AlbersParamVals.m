@@ -1,6 +1,11 @@
 % Author: Cassidy Le
 % Date: March 31, 2020
-% Summary:  Parameters in AlbersODE.m from Population Physiology (Albers2012)
+% Summary:  Defines arameters in AlbersODE.m 
+%           From Table 1 in Albers2012 Population Physiology model paper
+%           CITATION: Albers DJ, Hripcsak G, Schmidt M (2012) Population
+%           Physiology: Leveraging Electronic Health Record Data to
+%           Understand Human Endocrine Dynamics. PLoS ONE 7(12): e48058.
+%           doi:10.1371/journal.pone.0048058
 
 % No units
 a_1 = 6.67; % exponential constant affecting insulin secretion
