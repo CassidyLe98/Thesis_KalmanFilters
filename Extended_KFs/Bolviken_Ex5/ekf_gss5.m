@@ -51,7 +51,7 @@ P1 = Phi*P0*Phi + Q; % Q incorporates process noise
 S = H*P1*H + R; % R incorporates measurement noise
 K = P1*H/S;
 
-% Update/correct first value of P (EKF estiamted covariance matrix), xhat
+% Update/correct first value of P (EKF estimated covariance matrix), xhat
 % (EKF estimated value of state x), zhat (EKF estimated value of state z)
 P(1) = (1-K*H)*P1;
 xhat(1) = x1 + K*(z(1)-x1^2/20);
