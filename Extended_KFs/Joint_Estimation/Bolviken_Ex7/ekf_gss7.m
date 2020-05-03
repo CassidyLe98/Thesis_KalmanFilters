@@ -5,6 +5,8 @@ function [xhat,P] = ekf_gss7(Q,R,m0,P0,N)
 %          Example 7 in Bolviken (page 133) textbook
 %          Code is based on Bolviken code (pages 146-147)
 %          https://www.mn.uio.no/math/tjenester/kunnskap/kompendier/komp_kalman.pdf
+% Dependencies: sim_ex7param_meas.csv
+%               sim_ex7param_true.csv
 
 % Inputs: x = true values; taken from output of sim_gss5
 %         z = measured values; taken from output of sim_gss

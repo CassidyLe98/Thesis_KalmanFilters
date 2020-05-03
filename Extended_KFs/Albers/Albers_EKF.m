@@ -8,10 +8,15 @@
 %           present, and phenotype. Journal of the American Medical
 %           Informatics Association, 25(10), 1392-1401.
 %           https://doi.org/10.1093/jamia/ocy106
+% Dependencies: AlbersODE.m
+%               AlbersStateFcn.m
+%               AlbersNoiseFcn_Add.m
+%               AlbersMeasFcn.m
+%               AlbersParamVals.m
 
-% Note: Code implementation is based on MATLAB extendedKalmanFilter
-%       example. Altered to use EKF rather than EKF.
-%       https://www.mathworks.com/help/control/ref/extendedkalmanfilter.html
+% Note: Code implementation is based on MATLAB unscentedKalmanFilter
+%       example. Altered to use EKF rather than UKF.
+%       https://www.mathworks.com/help/control/ref/unscentedkalmanfilter.html
 
 % Initial conditions taken from Albers code in following GitHub repo:
 % https://github.com/djalbers/glucose_dynamics_modeling/blob/master/standard_multi_nutrition/integrate_plot_glucose.m
