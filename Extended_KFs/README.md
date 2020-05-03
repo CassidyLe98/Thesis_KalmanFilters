@@ -18,13 +18,13 @@ Once you have MATLAB downloaded and you are familiar with MATLAb syntax, downloa
 Then, access this folder in your directory under `../Thesis_KalmanFilters/Extended_KFs/`
 
 ## Contents
-The `/Extended_KFs/` folder consists of different implementations of EKF. This folder is separated by the implementations that are used to estimate just the state variables and the implementations that are used to estimate both state variables and parameters. For all but one of the implementations, the code is based on the source code from the Bolviken, Christophersen, and Storvik textbook. One implementation (state and parameter estimation for the type 2 diabetes model) uses MATLAB's built-in `extendedKalmanFilter` function to implement EKF.
+The `/Extended_KFs/` folder consists of different implementations of EKF. This folder is separated by the implementations that are used to estimate just the state variables and the implementations that are used to estimate both state variables and parameters. For all but two of the implementations, the code is based on the source code from the Bolviken, Christophersen, and Storvik textbook. Two implementations (state estimation for the type 2 diabetes model as well as state and parameter estimation for the type 2 diabetes model) uses MATLAB's built-in `extendedKalmanFilter` function to implement EKF.
 
 The different implementations of EKF are listed below:
 1. State estimation
     1. Simple linear model ([Bolviken, Christophersen, and Storvik textbook example 7](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Bolviken_Ex7))  
     2. Nonlinear model ([Bolviken, Christophersen, and Storvik textbook example 5](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Bolviken_Ex5))
-    3. Biological model ([type 2 diabetes system](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/Albers))
+    3. Biological model ([type 2 diabetes system](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Albers))
 2. State and parameter estimation
     1. Linear model ([Bolviken, Christophersen, and Storvik textbook example 7](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Joint_Estimation/Bolviken_Ex7))
     2. Biological model ([type 2 diabetes system](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Joint_Estimation/Albers))
@@ -34,6 +34,8 @@ The different implementations of EKF are listed below:
 To start exploring the files in this folder, it may be best to start with the [simple linear implementation](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Bolviken_Ex7) that only estimates the state variables. Since this example is linear, the mathematical rigor should not be as difficult. By this, I mean that manipulating the system in state space form should not be as difficult. For a thorough explanation of how to rewrite the system in state space form, see **Chapter 5.1** in the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
 
 After the linear example, you can move on to the [nonlinear example](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Bolviken_Ex5) that only estimates the state variables. Since this example is linear, the mathematical rigor should not be as difficult. A thorough explanation of this example can be found in **Chapter 5.2** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
+
+For a more challenging nonlinear model, you can try the nonlinear biological [type 2 diabetes model](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Albers). A thorough explanation of this example can be found in **Chapter 5.3** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
 
 With an understanding how to use EKF to estiamte state variables, one can move on to estimating states and parameters for a [linear model](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Joint_Estimation/Bolviken_Ex7). In this implementation, we use joint EKF to estimate both states and parameters. An explanation of joint estimation can be found in **Chapter 8.1** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis). Additionally, a thorough explanation of this example can be found in **Chapter 9.1** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
 
