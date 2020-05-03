@@ -1,4 +1,4 @@
-# Simple Linear Model
+# Simple Linear Model State and Parameter Estimation
 We provide the MATLAB code for implementing the joint extended Kalman filter (EKF) on a simple linear model, specifically an example (Example 7) proposed by Erik Bolviken, Nils Christophersen, and Geir Storvik in [their textbook](https://www.mn.uio.no/math/tjenester/kunnskap/kompendier/komp_kalman.pdf). This implementation produces estimates for two states (x and z) and one parameter (a). A thorough explanation of this implementation is detailed in **Chapter 9.1** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
 
 The code files are based on source code from a [textbook](https://www.mn.uio.no/math/tjenester/kunnskap/kompendier/komp_kalman.pdf) written by Bolviken, Christophersen, and Storvik. The source code can be found in **Appendix A.5** (under "Extended Kalman filtering on Example 5").
