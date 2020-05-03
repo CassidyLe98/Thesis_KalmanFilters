@@ -35,7 +35,7 @@ After the linear example, you can move on to the [nonlinear example](https://git
 
 With an understanding how to use EKF to estiamte state variables, one can move on to estimating states and parameters for a [linear model](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Joint_Estimation/Bolviken_Ex7). In this implementation, we use joint EKF to estimate both states and parameters. An explanation of joint estimation can be found in **Chapter 8.1** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis). Additionally, a thorough explanation of this example can be found in **Chapter 9.1** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
 
-For a more challenging biological model, you can try the [type 2 diabetes model](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Joint_Estimation/Albers). A thorough explanation of this example can be found in **Chapter 9.2** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
+For a more challenging model, you can try the nonlinear biological [type 2 diabetes model](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Extended_KFs/Joint_Estimation/Albers). A thorough explanation of this example can be found in **Chapter 9.2** of the corresponding [thesis paper](https://sites.google.com/g.hmc.edu/cle/thesis).
 
 ## Citation
 If you use this project for your research, please cite:
