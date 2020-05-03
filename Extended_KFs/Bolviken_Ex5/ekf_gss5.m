@@ -29,7 +29,8 @@ x = x{:,1}; % Setting x to be equal to all rows in first column
 z = readtable('sim_ex5__meas.csv'); % measurement state data (z)
 z = z{:,1}; % Setting z to be equal to all rows in first column
 
-% Initialize P, xhat, and zhat with zeros
+% Initialize P (EKF estimated covariance matrix), xhat (EKF estimated
+% value of state x), and zhat (EKF estimated value of state z) with zeros
 [n,m] = size(x); % Store size of x to use for defining variables
 P = zeros(n,m); % Same size as x since the system is a single state model
 xhat = zeros(n,m); % xhat size = x size b/c represents corrected x values
@@ -51,8 +52,7 @@ P1 = Phi*P0*Phi + Q; % Q incorporates process noise
 S = H*P1*H + R; % R incorporates measurement noise
 K = P1*H/S;
 
-% Update/correct first value of P (EKF estimated covariance matrix), xhat
-% (EKF estimated value of state x), zhat (EKF estimated value of state z)
+% Update/correct first value of P, xhat, and zhat
 P(1) = (1-K*H)*P1;
 xhat(1) = x1 + K*(z(1)-x1^2/20);
 zhat(1) = x1^2/20;
