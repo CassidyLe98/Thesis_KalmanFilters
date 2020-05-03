@@ -18,6 +18,8 @@ function [xhat,P] = ekf_gss5(Q,R,m0,P0,N)
 %         m0 = mean; 0 in this example
 %         P0 = standard deviation; 1 in this example
 %         N = number of time steps; 50 in this example
+%   Note: w(k) is random term in x(k)
+%         v(k) is error term in z(k)
 % Outputs:  xhat = EKF estimates for state x
 %           zhat = EKF estimates for state z
 

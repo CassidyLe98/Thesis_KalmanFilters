@@ -11,6 +11,8 @@ function [x,z] = sim_gss5(Q,R,m0,P0,N)
 %         m0 = mean; 0 in this example
 %         P0 = standard deviation; 1 in this example
 %         N = number of values produced; 50 in this example
+%   Note: w(k) is random term in x(k)
+%         v(k) is error term in z(k)
 % Outputs:  x = simulated data for true state values
 %           z = simulated data for measured state values
 
