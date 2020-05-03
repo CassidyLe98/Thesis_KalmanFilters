@@ -29,7 +29,7 @@ z = z{:,:}; % Setting z to be equal to all rows in first column
 
 % Initialize P (EKF estimated matrix of covariance matrices), xhat (EKF
 % estimated value of state x), zhat (EKF estimated value of state z) w/ zeros
-P = zeros(m*n,m); % Matrix of covariance matrices has m*n rows b/c
+P = zeros(m*n,m); % Matrix of covariance matrices has m*n rows
 xhat = zeros(n,m); % xhat size = x size b/c represents corrected x values
 zhat = zeros(a,b); % zhat size = z size b/c represents corrected z values
 
