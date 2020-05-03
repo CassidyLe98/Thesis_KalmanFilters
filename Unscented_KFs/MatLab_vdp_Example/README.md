@@ -13,7 +13,7 @@ Once you have MATLAB downloaded and you are familiar with MATLAb syntax, downloa
   ```
   git clone https://github.com/CassidyLe98/Thesis_KalmanFilters
   ```
-Then, access this folder in your directory under `../Thesis_KalmanFilters/Unscented_KFs/Kinematic/`
+Then, access this folder in your directory under `../Thesis_KalmanFilters/Unscented_KFs/MatLab_vdp_Example/`
 
 ## Contents 
 `vdp1.m` - defines the system in state space form  
