@@ -38,7 +38,7 @@ More details can be found in the README.md files in each folder. Below, I outlin
     3. State estimation for a biological model ([type 2 diabetes system](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/Albers))
     4. State and parameter estimation for a biological model ([type 2 diabetes system](https://github.com/CassidyLe98/Thesis_KalmanFilters/tree/master/Unscented_KFs/Albers/Joint_Estimation))
 
-## Acknowledgments
+## Acknowledgements
 The work done in this research is heavily supported and guided by Harvey Mudd College's Professor Lisette de Pillis, PhD, as well as Pomona College's Professor Blerta Shtylla, PhD.
 
 Additionally, this research was in collaboration with Lindsey Tam, who worked on her own implementations of EKF and UKF as well. Her implementations can be found in her [GitHub repository](https://github.com/lindseytam/LT_thesis/tree/master/code).
