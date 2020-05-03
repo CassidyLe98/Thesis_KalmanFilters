@@ -1,5 +1,5 @@
 function dydt = AlbersODE(t,y)
-% Author: LDP and CLe
+% Author: Lisette de Pillis and Cassidy Le
 % Date: November 19, 2019
 % Summary:  Evaluates Albers' glucose-insulin physiology model
 %           From Albers 2012 Population Physiology model paper
