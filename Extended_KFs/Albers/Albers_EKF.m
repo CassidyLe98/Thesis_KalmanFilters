@@ -50,13 +50,13 @@ ekf = extendedKalmanFilter(...
 
 % Setting measurement noise
 sqrtR = 5; % Standard deviation of measurement noise
-ukf.MeasurementNoise = sqrtR^2; % Variance of measurement noise
+ekf.MeasurementNoise = sqrtR^2; % Variance of measurement noise
 
 % Setting process noise values
 % Note: These values are REALLY sensitive. It is important to choose small
 %       values. Values that are too large won't allow sufficient smoothing.
 %       The algorithm will think the "noisy" measurements are correct.
-ukf.ProcessNoise = diag([0.02 0.1 0.04 0.2 0.5 0.01]);
+ekf.ProcessNoise = diag([0.02 0.1 0.04 0.2 0.5 0.01]);
 
 % Produce simulated noisy measurement data for glucose state variable
 rng(1); % Fix the random number generator for reproducible results
