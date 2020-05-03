@@ -3,14 +3,6 @@
 % Summary: EKF implementation of Albers study 2018
 %          Estimating all states and 3 parameters (E, V_i, t_i)
 
-% Reads in simulated dataset
-xTrue = readtable('Albers_xTrue');
-xTrue = xTrue{:,:};
-yTrue = readtable('Albers_yTrue');
-yTrue = yTrue{:,:};
-yMeas = readtable('Albers_yMeas');
-yMeas = yMeas{:,:};
-
 % Initial conditions taken from Albers code
 % I_p = 200
 % I_i = 200
@@ -22,13 +14,21 @@ yMeas = yMeas{:,:};
 % E = 0.13... actual value = 0.2 L min^(-1)
 % V_i = 15... actual value = 11 L
 % t_i = 90... actual value = 100 min
-%initialStateGuess = [200; 200; 12000; 0.1; 0.2; 0.1; 0.2; 11; 100];
+initialStateGuess = [200; 200; 12000; 0.1; 0.2; 0.1; 0.2; 11; 100];
 timeFinal = 590; % Units of time = minutes
 T = 1; % [min] Filter sample time
 timeVector = 0:T:timeFinal;
 
 % Solving system of ODE to produce true values (no noise)
-%[timeSteps,xTrue]=ode45(@AlbersODE,timeVector,initialStateGuess);
+[timeSteps,xTrue]=ode45(@AlbersODE,timeVector,initialStateGuess);
+
+% Reads in simulated dataset
+xTrue = readtable('Albers_xTrue');
+xTrue = xTrue{:,:};
+yTrue = readtable('Albers_yTrue');
+yTrue = yTrue{:,:};
+yMeas = readtable('Albers_yMeas');
+yMeas = yMeas{:,:};
 
 % System has 10L of glucose = 100dL
 % AlbersODE computes mg/L of glucose but AlbersState computes mg/dL

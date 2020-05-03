@@ -22,10 +22,18 @@ timeVector = 0:T:timeFinal;
 % Solving system of ODE to produce true values (no noise)
 [timeSteps,xTrue]=ode45(@AlbersODE,timeVector,initialStateGuess);
 
+% Reads in simulated dataset
+xTrue = readtable('Albers_xTrue');
+xTrue = xTrue{:,:};
+yTrue = readtable('Albers_yTrue');
+yTrue = yTrue{:,:};
+yMeas = readtable('Albers_yMeas');
+yMeas = yMeas{:,:};
+
 % System has 10L of glucose = 100dL
 % AlbersODE computes mg/L of glucose but AlbersState computes mg/dL
 % Convert L back to dL by dividing by 100
-xTrue(:,3) = xTrue(:,3)./100; % glucose G
+%xTrue(:,3) = xTrue(:,3)./100; % glucose G
 
 % Construction of filter has different initial state guesses
 % This allows UKF and yMeas to start at same initial values
@@ -51,11 +59,11 @@ rng(1); % Fix random number generator for reproducible results
 
 % Glucose G is the only state we currently measure
 % We pretend we measure E, Vi, ti 
-yTrue = [xTrue(:,3) xTrue(:,7) xTrue(:,8) xTrue(:,9)];
+%yTrue = [xTrue(:,3) xTrue(:,7) xTrue(:,8) xTrue(:,9)];
 
 % glucMeas = glucTrue + some noise -> distribution N(mean,sqrtR)
 % sqrtR (above) is stadard deviation of measurement noise 
-yMeas = yTrue + (sqrtR^2*randn(size(yTrue)));
+%yMeas = yTrue + (sqrtR^2*randn(size(yTrue)));
 
 for k=1:numel(timeSteps)
     % Let k denote the current time.
