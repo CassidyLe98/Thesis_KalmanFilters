@@ -1,4 +1,4 @@
-function [x] = AlbersParamFcn(x)
+function [x] = AlbersTransFcn(x)
 % Author: Cassidy Le
 % Date: March 31, 2019
 % Summary:  Solving x'=f(x) w/ sample time dt
