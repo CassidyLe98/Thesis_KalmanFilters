@@ -1,7 +1,7 @@
 % Author: Cassidy Le
 % Date: April 11, 2019
 % Summary: joint UKF implementation of Albers' et al 2018 T2D model
-%          Estimating all states and 3 parameters (E, V_i, t_i)
+%          Estimating one state (glucose) and 3 parameters (E, V_i, t_i)
 %           CITATION: Albers, D. J., Levine, M. E., Stuart, A., Mamykina,
 %           L., Gluckman, B., & Hripcsak, G. (2018). Mechanistic machine
 %           learning: How data assimilation leverages physiologic knowledge
