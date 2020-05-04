@@ -16,5 +16,6 @@ end
 
 function dxdt = vdpStateFcnContinuous(x)
 % Summary: Evaluate the van der Pol ODEs for mu = 1
-dxdt = [x(2); (1-x(1)^2)*x(2)-x(1)];
+dxdt = [x(2); % velocity
+       (1-x(1)^2)*x(2)-x(1)]; % acceleration
 end
