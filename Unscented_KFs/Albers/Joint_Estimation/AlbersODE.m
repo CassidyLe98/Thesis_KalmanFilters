@@ -52,8 +52,8 @@ dV_i = 0; % insulin volume (L)
 dt_i = 0;  % time constant for remote insulin degradation (min)
 
 % Output DE vector
-dydt = [dI_p; dI_i; dG; dh_1; % states (insulin/glucose)
-        dh_2; dh_3; % states (feeding)
+dydt = [dI_p; dI_i; dG; % states (insulin/glucose)
+        dh_1; dh_2; dh_3; % states (feeding)
         dE; dV_i; dt_i]; % parameters
 
 end
