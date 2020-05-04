@@ -9,6 +9,6 @@ function yk = kinematicMeasurementFcn(xk)
 
 % yk = [xk(1); (state: velocity)
 %       xk(2)]; (state: gravity)
-% The measurement is velocity xk(1) with multiplicative noise
+% The measurement is velocity xk(1)
 yk = xk(1);
 end
