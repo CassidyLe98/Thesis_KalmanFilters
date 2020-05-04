@@ -46,11 +46,11 @@ timeVector = 0:T:5;
 
 % Produce simulated noisy measurement data for glucose state variable
 rng(1); % Fix the random number generator for reproducible results
-velocityTrue = xTrue(:,1); % Extract yTrue to only first column (velocity)
+velocityTrue = xTrue(:,1); % Extract true to only first column (velocity)
 % Note: Scaling for simulated true measure does not change proportionally
 %       well (e.g. worst case -100*0.1=-10 rather than even boundary width
-%       around true). So it should be yMeas = yTrue + some noisesome noise
-%       with distribution N(mean,sqrtR) where sqrtR is stadard deviation of
+%       around true). So it should be yMeas = yTrue + some noise with
+%       distribution N(mean,sqrtR) where sqrtR is stadard deviation of
 %       measurement noise (from line 63). Therefore,
 %       noise = 5*(random value between -1 and 1 scaled by sqrtR)
 velocityMeas = velocityTrue + 5*(sqrt(R)*randn(size(velocityTrue)));
