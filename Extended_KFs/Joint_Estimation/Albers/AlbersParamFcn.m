@@ -1,5 +1,5 @@
 function [x] = AlbersParamFcn(x)
-% Author: CLe
+% Author: Cassidy Le
 % Date: March 31, 2020
 % Summary:  Solving x'=f(x) w/ sample time dt
 
