@@ -8,7 +8,8 @@
 %           Survey, 8, 1-18.
 % Dependencies: kinematicStateFcn.m
 %               kinematicMeasAdditiveNoiseFcn.m
-%               
+%               Kinematic1.m
+%               kinematicMeasurementFcn.m
 
 % Note: Implementation is based on MATLAB unscentedKalmanFilter example.
 %       https://www.mathworks.com/help/control/ref/unscentedkalmanfilter.html
