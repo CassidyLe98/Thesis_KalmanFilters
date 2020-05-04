@@ -7,7 +7,7 @@ function dydt = vdp1(t,y)
 % Note: Implementation is from on MATLAB unscentedKalmanFilter example.
 %       Jacek Kierzenka and Lawrence F. Shampine
 %       Copyright 1984-2014 The MathWorks, Inc.
-%       https://www.mathworks.com/help/control/ref/unscentedkalmanfilter.html
+%       https://www.mathworks.com/help/control/ug/nonlinear-state-estimation-using-unscented-kalman-filter.html
 
 % Output DE vector consists of velocity y(2) and acceleration
 dydt = [y(2); % velocity

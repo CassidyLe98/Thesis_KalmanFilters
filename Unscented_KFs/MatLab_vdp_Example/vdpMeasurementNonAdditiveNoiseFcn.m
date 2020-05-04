@@ -7,7 +7,7 @@ function yk = vdpMeasurementNonAdditiveNoiseFcn(xk,vk)
 
 % Note: Implementation is from on MATLAB unscentedKalmanFilter example.
 %       Copyright 2016 The MathWorks, Inc.
-%       https://www.mathworks.com/help/control/ref/unscentedkalmanfilter.html
+%       https://www.mathworks.com/help/control/ug/nonlinear-state-estimation-using-unscented-kalman-filter.html
 
 % The measurement is the first state with multiplicative noise
 yk = xk(1)*(1+vk);

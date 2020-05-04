@@ -7,7 +7,7 @@ function x = vdpStateFcn(x)
 
 % Note: Implementation is from on MATLAB unscentedKalmanFilter example.
 %       Copyright 2016 The MathWorks, Inc.
-%       https://www.mathworks.com/help/control/ref/unscentedkalmanfilter.html
+%       https://www.mathworks.com/help/control/ug/nonlinear-state-estimation-using-unscented-kalman-filter.html
 
 % Euler integration of continuous-time dynamics x'=f(x) with sample time dt
 dt = 0.05; % [s] Sample time
