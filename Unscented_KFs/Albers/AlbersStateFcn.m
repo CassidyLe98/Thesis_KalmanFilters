@@ -1,17 +1,21 @@
 function [x] = AlbersStateFcn(x)
-% Author: LdP and CLe
+% Author: Lisette de Pillis and Cassidy Le
 % Date: November 19, 2019
 % Summary:  Solving x'=f(x) w/ sample time dt
+% Dependencies: AlbersODE.m
 
 % Updated by LdP March 14, 2020
 % Summary: LdP changed integration from Euler to ode45
+%           Be sure to convert units of glucose x(3)
 
 % Inputs:   x = current states at "time" k-1
 % Outputs:  xout(end,:)' = propagated states, x[k+1]
 
-dt = 0.1;
+dt = 0.1; % Size of time step
 
-% Convert scale back to total glucose
+% Convert scale for glucose x(3) back to total glucose (10L = 100dL)
+% Multiply by 100 b/c system computes glucose in units mg dL^(-1)
+% But input for glucose x(3) (initialStateGuess) has units mg
 x(3) = 100.*x(3);
 
 % x is the current state (at "time" k-1)
@@ -25,7 +29,6 @@ timeVector = 0:dt:1;
 [timeSteps,xout] = ode45(@AlbersODE,timeVector,initialStateGuess);
 
 % Convert scale back to glucose per dL
-% Convert scale back to total glucose
 xout(:,3) = xout(:,3)./100;
 
 x = xout(end,:)'; % Return the final time solution
