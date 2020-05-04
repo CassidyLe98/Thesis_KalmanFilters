@@ -1,5 +1,5 @@
 function [x] = AlbersTransFcn(x)
-% Author: Cassidy Le
+% Author: Lisette de Pillis and Cassidy Le
 % Date: March 31, 2019
 % Summary:  Solving x'=f(x) w/ sample time dt
 % Dependencies: AlbersODE.m
@@ -11,7 +11,7 @@ function [x] = AlbersTransFcn(x)
 % Inputs:   x = current states at "time" k-1
 % Outputs:  xout(end,:)' = propagated states, x[k+1]
 
-dt = 0.1;
+dt = 0.1; % Size of time step
 
 % Convert scale for glucose x(3) back to total glucose (10L = 100dL)
 % Multiply by 100 b/c system computes glucose in units mg dL^(-1)
