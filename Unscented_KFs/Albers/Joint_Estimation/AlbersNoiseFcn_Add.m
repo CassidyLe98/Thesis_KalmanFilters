@@ -3,9 +3,9 @@ function yk = AlbersNoiseFcn_Add(xk)
 % Date: March 31, 2019
 % Summary:  Measurement function for discrete time nonlinear
 %           state estimators with additive measurement noise.
-%           Indicates which states the EKF algorithm is estimating.
+%           Indicates which states the UKF algorithm is estimating.
 %           In this case, only one state (glucose) and all 3 parameters.
-%           Fcn is additive b/c EKF function will automatically add noise
+%           Fcn is additive b/c UKF function will automatically add noise
 %           so we don't need to add noise in this function.
 %           Just call 'HasAdditiveMeasurementNoise' as true.
 % Inputs:   xk = states at time k, x[k]
