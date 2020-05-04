@@ -32,7 +32,7 @@ dh_1 = 3*(I_p-h_1)/t_d;
 dh_2 = 3*(h_1-h_2)/t_d;
 dh_3 = 3*(h_2-h_3)/t_d;
 
-% Dynamical system (3 ODEs)
+% ODEs representing plasma insulin, remote insulin, and glucose states
 dI_p = R_m/(1+exp(-G/(V_g*C_1)+a_1))-E*((I_p/V_p)-(I_i/V_i))-(I_p/t_p);
 dI_i = E*((I_p/V_p)-(I_i/V_i))-(I_i/t_i);
 % Note: Equation dG does not align with Albers 2012 equations
