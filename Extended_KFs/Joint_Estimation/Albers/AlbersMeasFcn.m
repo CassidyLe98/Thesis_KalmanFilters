@@ -1,5 +1,5 @@
 function yk = AlbersMeasFcn(xk)
-% Author: CLe
+% Author: Cassidy Le
 % Date: March 31, 2020
 % Summary:  Measurement function for discrete time nonlinear state
 %           estimators. Indicates which states are being "measured".
