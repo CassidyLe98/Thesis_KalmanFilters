@@ -6,9 +6,9 @@ initialStateGuess = [2; 0]; % xhat[k|k-1]
 % Construct the filter
 ukf = unscentedKalmanFilter(...
     @kinematicStateFcn,... % State transition function
-    @kinematicMeasurementNonAdditiveNoiseFcn,... % Measurement function
+    @kinematicMeasAdditiveNoiseFcn,... % Measurement function
     initialStateGuess,...
-    'HasAdditiveMeasurementNoise',false);
+    'HasAdditiveMeasurementNoise',true);
 
 R = 0.2; % Variance of the measurement noise v[k]
 ukf.MeasurementNoise = R;

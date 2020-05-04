@@ -1,4 +1,4 @@
-function yk = kinematicMeasurementNonAdditiveNoiseFcn(xk,vk)
+function yk = kinematicMeasAdditiveNoiseFcn(xk)
 % Author: Cassidy Le
 % Date: November 6, 2019
 % Summary:  Measurement function for discrete time linear state
