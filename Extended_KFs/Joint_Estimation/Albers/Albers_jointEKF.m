@@ -14,7 +14,7 @@
 %               AlbersNoiseFcn_Add.m
 %               AlbersMeasFcn.m
 %               AlbersParamVals.m
-% (if simulating new data dependencies also include the following
+% (if simulating not new data dependencies also include the following
 %               Albers_xTrue
 %               Albers_yTrue
 %               Albers_yMeas
