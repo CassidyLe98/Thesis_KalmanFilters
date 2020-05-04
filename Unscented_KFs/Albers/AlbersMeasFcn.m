@@ -3,7 +3,7 @@ function yk = AlbersMeasFcn(xk)
 % Date: November 21, 2019
 % Summary:  Measurement function for discrete time nonlinear state
 %           estimators. Indicates which states are being "measured".
-%           In this case, measuring glucose and all 3 parameters.
+%           In this case, measuring glucose.
 % Inputs:   xk = states at time k, x[k]
 % Outputs:  yk = y[k], measurements at time k
 
