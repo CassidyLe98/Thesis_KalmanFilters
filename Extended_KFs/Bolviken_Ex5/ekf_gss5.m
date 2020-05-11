@@ -26,7 +26,7 @@ function [xhat,P] = ekf_gss5(Q,R,m0,P0,N)
 % Read in stored data from csv files for reproducible results
 x = readtable('sim_ex5_true.csv'); % true state data (x)
 x = x{:,1}; % Setting x to be equal to all rows in first column
-z = readtable('sim_ex5__meas.csv'); % measurement state data (z)
+z = readtable('sim_ex5_meas.csv'); % measurement state data (z)
 z = z{:,1}; % Setting z to be equal to all rows in first column
 
 % Initialize P (EKF estimated covariance matrix), xhat (EKF estimated
