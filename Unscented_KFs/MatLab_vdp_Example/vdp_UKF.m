@@ -36,8 +36,8 @@ ukf.ProcessNoise = diag([0.02 0.1]); % original
 
 % Defining time interval to filter sample time
 % Units of time = [secs]
-T = 0.25; % Size of time step
-timeVector = 0:T:15;
+T = 0.05; % Size of time step
+timeVector = 0:T:5;
 
 % Create simulated data values (xTrue) by solving system of ODE using ode45
 [~,xTrue]=ode45(@vdp1,timeVector,initialStateGuess);
@@ -83,14 +83,14 @@ subplot(2,1,1); % Creating verticle subplots, next plot is first plot (velocity)
 plot(timeVector,xTrue(:,1),timeVector,xCorrectedUKF(:,1),timeVector,yMeas(:));
 set(gca, 'FontSize', 15);
 leg = legend('True','UKF estimate','Measured')
-leg.FontSize = 10;
+leg.FontSize = 15;
 ylim([-2.6 2.6]);
 ylabel('x_1', 'FontSize', 15);
 subplot(2,1,2); % Second subplot (acceleration)
 plot(timeVector,xTrue(:,2),timeVector,xCorrectedUKF(:,2));
-f = legend('True','UKF estimate')
-f.FontSize = 10;
-set(gca, 'FontSize', 10);
+%f = legend('True','UKF estimate')
+%f.FontSize = 10;
+set(gca, 'FontSize', 15);
 ylim([-3 1.5]);
 xlabel('Time [s]', 'FontSize', 15);
 ylabel('x_2', 'FontSize', 15);
